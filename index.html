@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Tomas Stutz — Full Stack Developer. Portfolio personal con proyectos de desarrollo web, algoritmos y UI/UX." />
+  <meta name="keywords" content="Tomas Stutz, developer, portfolio, web development, javascript, html, css" />
+  <meta property="og:title" content="Tomas Stutz — Developer Portfolio" />
+  <meta property="og:description" content="Portfolio personal de Tomas Stutz, desarrollador web." />
+  <title>Tomas Stutz — Developer</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Devicon -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+  <!-- Tailwind CSS v4 -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ══════════════════════════════════════ -->
+  <!-- AURORA BACKGROUND                      -->
+  <!-- ══════════════════════════════════════ -->
+  <div class="aurora-container" aria-hidden="true">
+    <div class="aurora-orb orb-1"></div>
+    <div class="aurora-orb orb-2"></div>
+    <div class="noise-overlay"></div>
+  </div>
+
+  <!-- ══════════════════════════════════════ -->
+  <!-- CURSOR GLOW                            -->
+  <!-- ══════════════════════════════════════ -->
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <!-- ══════════════════════════════════════ -->
+  <!-- NAVIGATION                             -->
+  <!-- ══════════════════════════════════════ -->
+  <nav class="glass-nav" id="mainNav" role="navigation" aria-label="Navegación principal">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo" aria-label="Ir al inicio">
+        <span class="logo-bracket">{</span>
+        <span class="logo-text">TBS</span>
+        <span class="logo-bracket">}</span>
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="#about" class="nav-link" id="nav-about">About</a></li>
+        <li><a href="#projects" class="nav-link" id="nav-projects">Projects</a></li>
+        <li><a href="#skills" class="nav-link" id="nav-skills">Skills</a></li>
+        <li><a href="#contact" class="nav-link" id="nav-contact">Contact</a></li>
+      </ul>
+
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true" role="menu">
+      <a href="#about" class="mobile-link" role="menuitem">About</a>
+      <a href="#projects" class="mobile-link" role="menuitem">Projects</a>
+      <a href="#skills" class="mobile-link" role="menuitem">Skills</a>
+      <a href="#contact" class="mobile-link" role="menuitem">Contact</a>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════ -->
+  <!-- HERO SECTION                           -->
+  <!-- ══════════════════════════════════════ -->
+  <section class="hero-section" id="hero" aria-label="Presentación principal">
+    <div class="hero-content">
+
+      <!-- Left: Text -->
+      <div class="hero-text" id="heroText">
+        <div class="hero-badge glass-chip">
+          <span class="badge-dot"></span>
+          <span>Disponible para el Desarrollo</span>
+        </div>
+
+        <h1 class="hero-title">
+          <span class="title-line">Hola, soy</span>
+          <span class="title-name">Tomas Bautista <br class="aria-hidden"/> Stutz</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Desarrollador Web Full Stack. Construyo interfaces que combinan
+          funcionalidad sólida con experiencias visuales memorables.
+        </p>
+
+        <div class="hero-cta">
+          <a href="#projects" class="btn-primary" id="hero-cta-projects">
+            <span>Ver proyectos</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              aria-hidden="true">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+          <a href="#contact" class="btn-ghost" id="hero-cta-contact">Contactarme</a>
+        </div>
+      </div>
+
+      <!-- Right: Avatar Card -->
+      <div class="hero-card glass-panel tilt-card" id="heroCard" aria-label="Foto de perfil">
+        <div class="avatar-ring">
+          <img src="assets/imagen-perfil.jpg" alt="Foto de Tomas Stutz" class="avatar-img" id="profileImage" />
+        </div>
+        <div class="hero-card-info">
+          <div class="info-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              aria-hidden="true">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            <span>Necochea, Buenos Aires.</span>
+          </div>
+
+          <div class="info-tag"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" aria-hidden="true">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+              <path d="M6 12v5c3 3 9 3 12 0v-5" />
+            </svg><span>UTN</span>
+          </div>
+
+          <div class="info-tag"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" aria-hidden="true">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+            </svg><span>CoderHouse</span>
+          </div>
+
+          <div class="info-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              aria-hidden="true">
+              <polyline points="16 18 22 12 16 6" />
+              <polyline points="8 6 2 12 8 18" />
+            </svg>
+            <span>The Odin Project</span>
+          </div>
+
+        </div>
+        <div class="card-shine" aria-hidden="true"></div>
+      </div>
+
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator" aria-label="Scroll hacia abajo">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════ -->
+  <!-- ABOUT SECTION                          -->
+  <!-- ══════════════════════════════════════ -->
+  <section class="section about-section" id="about" aria-label="Sobre mí">
+    <div class="section-inner">
+
+      <div class="section-header reveal-item">
+        <span class="section-tag">01 — About</span>
+        <h2 class="section-title">Un poco sobre<br /><em>quién soy</em></h2>
+      </div>
+
+      <div class="about-grid">
+        <!-- Main glass panel -->
+        <div class="about-main glass-panel reveal-item">
+          <p class="about-text">
+            Desarrollador web en formación a través de <strong>The Odin Project</strong>, con
+            enfoque en construir proyectos reales que van más allá del tutorial. Me interesa
+            la intersección entre el código limpio y el diseño que genera experiencias.
+          </p>
+          <p class="about-text">
+            Cada proyecto en mi portfolio es un problema que resolví, una mecánica que
+            implementé desde cero, o una idea que quería ver funcionar en el browser.
+          </p>
+          <div class="about-stats">
+            <div class="stat-item">
+              <span class="stat-number" data-target="50">0</span>
+              <span class="stat-label">Proyectos</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="5">0</span>
+              <span class="stat-label">Años aprendiendo</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="99">0</span>
+              <span class="stat-label">% Passion</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Side bento cards -->
+        <div class="about-bento">
+          <div class="bento-card glass-panel reveal-item" id="bento-learning">
+            <div class="bento-icon">📚</div>
+            <h3>Aprendizaje continuo</h3>
+            <p>Actualmente en la sección de Advanced HTML & CSS del Odin Project.</p>
+          </div>
+          <div class="bento-card glass-panel reveal-item" id="bento-build">
+            <div class="bento-icon">🛠️</div>
+            <h3>Build first</h3>
+            <p>Creo que la mejor forma de aprender es construyendo cosas reales, sin atajos.</p>
+          </div>
+          <div class="bento-card glass-panel reveal-item" id="bento-design">
+            <div class="bento-icon">✨</div>
+            <h3>Obsesionado con el diseño</h3>
+            <p>El código debe funcionar pero también debe verse extraordinario.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════ -->
+  <!-- PROJECTS SECTION                       -->
+  <!-- ══════════════════════════════════════ -->
+  <section class="section projects-section" id="projects" aria-label="Proyectos">
+    <div class="section-inner">
+
+      <div class="section-header reveal-item">
+        <span class="section-tag">02 — Projects</span>
+        <h2 class="section-title">Lo que<br /><em>construí</em></h2>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Project 1: Battleship -->
+        <article class="project-card glass-panel tilt-card reveal-item" id="project-battleship">
+          <div class="project-number">01</div>
+          <div class="project-emoji">⚓</div>
+          <h3 class="project-name">Battleship</h3>
+          <p class="project-desc">Juego de Batalla Naval en el navegador con lógica de turnos, IA básica para el
+            oponente y tablero interactivo.</p>
+          <div class="project-tags">
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">DOM</span>
+            <span class="tech-tag">TDD</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Tomas2439/Battleship" class="project-link"
+              aria-label="Ver código de Battleship en GitHub" target="_blank" rel="noopener">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+              </svg>
+              GitHub
+            </a>
+            <a href="https://tomas2439.github.io/Battleship/" class="project-link project-link-live"
+              aria-label="Ver demo live de Battleship" target="_blank" rel="noopener">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                aria-hidden="true">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                <polyline points="15 3 21 3 21 9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
+              Live
+            </a>
+          </div>
+          <div class="card-shine" aria-hidden="true"></div>
+        </article>
+
+        <!-- Project 2: Knights Travails -->
+        <article class="project-card glass-panel tilt-card reveal-item" id="project-knights">
+          <div class="project-number">02</div>
+          <div class="project-emoji">♞</div>
+          <h3 class="project-name">Knights Travails</h3>
+          <p class="project-desc">Algoritmo BFS que encuentra el camino más corto de un caballo de ajedrez en el
+            tablero. Visualización del recorrido.</p>
+          <div class="project-tags">
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">BFS</span>
+            <span class="tech-tag">Algoritmos</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Tomas2439/CaballoAjedrez" class="project-link"
+              aria-label="Ver código de Knights Travails en GitHub" target="_blank" rel="noopener">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+              </svg>
+              GitHub
+            </a>
+            <a href="https://tomas2439.github.io/CaballoAjedrez/" class="project-link project-link-live"
+              aria-label="Ver demo live de Knights Travails" target="_blank" rel="noopener">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                aria-hidden="true">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                <polyline points="15 3 21 3 21 9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
+              Live
+            </a>
+          </div>
+          <div class="card-shine" aria-hidden="true"></div>
+        </article>
+
+        <!-- Project 3: Recursion -->
+        <article class="project-card glass-panel tilt-card reveal-item" id="project-recursion">
+          <div class="project-number">03</div>
+          <div class="project-emoji">🔁</div>
+          <h3 class="project-name">Recursion</h3>
+          <p class="project-desc">Implementación de funciones clásicas con recursión: Fibonacci, Merge Sort, y más.
+            Visualización del call stack.</p>
+          <div class="project-tags">
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">Recursión</span>
+            <span class="tech-tag">Algoritmos</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Tomas2439/recursion" class="project-link"
+              aria-label="Ver código de Recursion en GitHub" target="_blank" rel="noopener">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+              </svg>
+              GitHub
+            </a>
+            <a href="https://tomas2439.github.io/recursion/" class="project-link project-link-live"
+              aria-label="Ver demo live de Recursion" target="_blank" rel="noopener">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                aria-hidden="true">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                <polyline points="15 3 21 3 21 9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
+              Live
+            </a>
+          </div>
+          <div class="card-shine" aria-hidden="true"></div>
+        </article>
+
+        <!-- Project 4: Que me falta -->
+        <article class="project-card glass-panel tilt-card reveal-item" id="project-quemefalta">
+          <div class="project-number">04</div>
+          <div class="project-emoji">📋</div>
+          <h3 class="project-name">¿Qué me falta?</h3>
+          <p class="project-desc">Aplicación de gestión de tareas y progreso personal. Interfaz limpia para tracking de
+            objetivos y pendientes.</p>
+          <div class="project-tags">
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">Local Storage</span>
+            <span class="tech-tag">DOM</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Tomas2439/Que-me-falta" class="project-link"
+              aria-label="Ver código de Qué me falta en GitHub" target="_blank" rel="noopener">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+              </svg>
+              GitHub
+            </a>
+            <a href="https://tomas2439.github.io/Que-me-falta/" class="project-link project-link-live"
+              aria-label="Ver demo live de Qué me falta" target="_blank" rel="noopener">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                aria-hidden="true">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                <polyline points="15 3 21 3 21 9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
+              Live
+            </a>
+          </div>
+          <div class="card-shine" aria-hidden="true"></div>
+        </article>
+
+        <!-- Project 5: Hotel Deruha -->
+        <article class="project-card glass-panel tilt-card reveal-item" id="project-hotel">
+          <div class="project-number">05</div>
+          <div class="project-emoji">🏨</div>
+          <h3 class="project-name">Hotel Deruha</h3>
+          <p class="project-desc">Landing page de hotel con sistema de reservas y galería de habitaciones. Diseño
+            premium y UI elegante.</p>
+          <div class="project-tags">
+            <span class="tech-tag">HTML</span>
+            <span class="tech-tag">CSS</span>
+            <span class="tech-tag">JavaScript</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="project-link" aria-label="Ver código de Hotel Deruha en GitHub" target="_blank"
+              rel="noopener">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+              </svg>
+              GitHub
+            </a>
+            <a href="https://hotelderuha.com/" class="project-link project-link-live"
+              aria-label="Ver demo live de Hotel Deruha" target="_blank" rel="noopener">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                aria-hidden="true">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                <polyline points="15 3 21 3 21 9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
+              Live
+            </a>
+          </div>
+          <div class="card-shine" aria-hidden="true"></div>
+        </article>
+
+        <!-- Project 6: Tateti -->
+        <article class="project-card glass-panel tilt-card reveal-item" id="project-tateti">
+          <div class="project-number">06</div>
+          <div class="project-emoji">⭕</div>
+          <h3 class="project-name">Tateti</h3>
+          <p class="project-desc">Tic-Tac-Toe con múltiples modos de juego: vs jugador y vs IA. Detección automática de
+            ganadores y estadísticas.</p>
+          <div class="project-tags">
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">Game Logic</span>
+            <span class="tech-tag">DOM</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Tomas2439/tateti" class="project-link"
+              aria-label="Ver código de Tateti en GitHub" target="_blank" rel="noopener">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+              </svg>
+              GitHub
+            </a>
+            <a href="https://tomas2439.github.io/tateti/" class="project-link project-link-live"
+              aria-label="Ver demo live de Tateti" target="_blank" rel="noopener">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                aria-hidden="true">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                <polyline points="15 3 21 3 21 9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
+              Live
+            </a>
+          </div>
+          <div class="card-shine" aria-hidden="true"></div>
+        </article>
+
+        <!-- Project 7: Calculadora -->
+        <article class="project-card glass-panel tilt-card reveal-item" id="project-calc">
+          <div class="project-number">07</div>
+          <div class="project-emoji">🔢</div>
+          <h3 class="project-name">Calculadora</h3>
+          <p class="project-desc">Calculadora funcional con soporte de operaciones encadenadas, teclado físico y
+            animaciones de botones.</p>
+          <div class="project-tags">
+            <span class="tech-tag">HTML</span>
+            <span class="tech-tag">CSS</span>
+            <span class="tech-tag">JavaScript</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Tomas2439/Calculadora" class="project-link"
+              aria-label="Ver código de Calculadora en GitHub" target="_blank" rel="noopener">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+              </svg>
+              GitHub
+            </a>
+            <a href="https://tomas2439.github.io/Calculadora/" class="project-link project-link-live"
+              aria-label="Ver demo live de Calculadora" target="_blank" rel="noopener">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                aria-hidden="true">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                <polyline points="15 3 21 3 21 9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
+              Live
+            </a>
+          </div>
+          <div class="card-shine" aria-hidden="true"></div>
+        </article>
+
+        <!-- Project 8: Formulario de ingreso -->
+        <article class="project-card glass-panel tilt-card reveal-item" id="project-form">
+          <div class="project-number">08</div>
+          <div class="project-emoji">📝</div>
+          <h3 class="project-name">Formulario de Ingreso</h3>
+          <p class="project-desc">Formulario de registro con validación en tiempo real, feedback visual por campo y
+            manejo de errores elegante.</p>
+          <div class="project-tags">
+            <span class="tech-tag">HTML</span>
+            <span class="tech-tag">CSS</span>
+            <span class="tech-tag">Validación</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Tomas2439/formulario-ingreso" class="project-link"
+              aria-label="Ver código de Formulario de ingreso en GitHub" target="_blank" rel="noopener">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+              </svg>
+              GitHub
+            </a>
+            <a href="https://tomas2439.github.io/formulario-ingreso/" class="project-link project-link-live"
+              aria-label="Ver demo live de Formulario de ingreso" target="_blank" rel="noopener">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                aria-hidden="true">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                <polyline points="15 3 21 3 21 9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
+              Live
+            </a>
+          </div>
+          <div class="card-shine" aria-hidden="true"></div>
+        </article>
+
+        <!-- Project 9: Barhaus Menu -->
+        <article class="project-card glass-panel tilt-card reveal-item" id="project-barhaus">
+          <div class="project-number">09</div>
+          <div class="project-emoji">🍸</div>
+          <h3 class="project-name">Barhaus Menu</h3>
+          <p class="project-desc">Menú digital interactivo para bar/restaurante. Filtros por categoría, diseño nocturno
+            premium y animaciones de cartas.</p>
+          <div class="project-tags">
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">Node</span>
+            <span class="tech-tag">JavaScript</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Tomas2439/Barhaus-Menu" class="project-link"
+              aria-label="Ver código de Barhaus Menu en GitHub" target="_blank" rel="noopener">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+              </svg>
+              GitHub
+            </a>
+            <a href="https://barhaus-menu.vercel.app/" class="project-link project-link-live"
+              aria-label="Ver demo live de Barhaus Menu" target="_blank" rel="noopener">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                aria-hidden="true">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                <polyline points="15 3 21 3 21 9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
+              Live
+            </a>
+          </div>
+          <div class="card-shine" aria-hidden="true"></div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════ -->
+  <!-- SKILLS SECTION                         -->
+  <!-- ══════════════════════════════════════ -->
+  <section class="section skills-section" id="skills" aria-label="Habilidades técnicas">
+    <div class="section-inner">
+
+      <div class="section-header reveal-item">
+        <span class="section-tag">03 — Skills</span>
+        <h2 class="section-title">Mi stack<br /><em>tecnológico</em></h2>
+      </div>
+
+      <div class="skills-container reveal-item">
+        <div class="skills-grid glass-panel">
+
+          <div class="skill-item" title="HTML5">
+            <i class="devicon-html5-plain colored"></i>
+            <span>HTML5</span>
+          </div>
+          <div class="skill-item" title="CSS3">
+            <i class="devicon-css3-plain colored"></i>
+            <span>CSS3</span>
+          </div>
+          <div class="skill-item" title="JavaScript">
+            <i class="devicon-javascript-plain colored"></i>
+            <span>JavaScript</span>
+          </div>
+          <div class="skill-item" title="Git">
+            <i class="devicon-git-plain colored"></i>
+            <span>Git</span>
+          </div>
+          <div class="skill-item" title="GitHub">
+            <i class="devicon-github-original"></i>
+            <span>GitHub</span>
+          </div>
+          <div class="skill-item" title="Node.js">
+            <i class="devicon-nodejs-plain colored"></i>
+            <span>Node.js</span>
+          </div>
+          <div class="skill-item" title="Webpack">
+            <i class="devicon-webpack-plain colored"></i>
+            <span>Webpack</span>
+          </div>
+          <div class="skill-item" title="Jest">
+            <i class="devicon-jest-plain colored"></i>
+            <span>Jest</span>
+          </div>
+          <div class="skill-item" title="Java">
+            <i class="devicon-java-plain colored"></i>
+            <span>Java</span>
+          </div>
+          <div class="skill-item" title="Astro">
+            <i class="devicon-astro-plain colored"></i>
+            <span>Astro</span>
+          </div>
+          <div class="skill-item" title="PNPM">
+            <i class="devicon-pnpm-plain-wordmark colored"></i>
+            <span>PNPM</span>
+          </div>
+          <div class="skill-item" title="Thymeleaf">
+            <i class="devicon-thymeleaf-plain colored"></i>
+            <span>Thymeleaf</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Currently Learning Banner -->
+      <div class="learning-banner glass-panel reveal-item">
+        <div class="learning-text">
+          <span class="learning-label">Actualmente aprendiendo</span>
+          <div class="learning-scroll">
+            <span>React &nbsp;·&nbsp; TypeScript &nbsp;·&nbsp; SQL &nbsp;·&nbsp; Node.js avanzado &nbsp;·&nbsp; APIs
+              REST &nbsp;·&nbsp; React &nbsp;·&nbsp; TypeScript &nbsp;·&nbsp; SQL &nbsp;·&nbsp; Node.js avanzado
+              &nbsp;·&nbsp; APIs REST &nbsp;·&nbsp;</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════ -->
+  <!-- CONTACT SECTION                        -->
+  <!-- ══════════════════════════════════════ -->
+  <section class="section contact-section" id="contact" aria-label="Contacto">
+    <div class="section-inner">
+
+      <div class="section-header reveal-item">
+        <span class="section-tag">04 — Contact</span>
+        <h2 class="section-title">¿Trabajamos<br /><em>juntos?</em></h2>
+      </div>
+
+      <div class="contact-grid">
+
+        <!-- Contact Card -->
+        <div class="contact-main glass-panel reveal-item">
+          <p class="contact-tagline">
+            Estoy abierto a oportunidades, colaboraciones y proyectos interesantes.
+            No dudes en escribirme.
+          </p>
+
+          <div class="contact-links">
+            <!-- GitHub -->
+            <a href="https://github.com/Tomas2439" class="contact-link glass-chip" id="contact-github" target="_blank"
+              rel="noopener" aria-label="GitHub de Tomas Stutz">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+              </svg>
+              <span>GitHub</span>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/tomas-stutz/" class="contact-link glass-chip" id="contact-linkedin"
+              target="_blank" rel="noopener" aria-label="LinkedIn de Tomas Stutz">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+              </svg>
+              <span>LinkedIn</span>
+            </a>
+
+            <!-- Email -->
+            <a href="mailto:tomas@example.com" class="contact-link glass-chip" id="contact-email"
+              aria-label="Enviar email a Tomas Stutz">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+              <span>Email</span>
+            </a>
+
+            <!-- Instagram Profile -->
+            <a href="https://www.instagram.com/tomas_stutz" class="contact-link glass-chip" id="contact-instagram"
+              target="_blank" rel="noopener" aria-label="Instagram de Tomas Stutz">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+              </svg>
+              <span>Instagram</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Decorative quote panel -->
+        <div class="contact-quote glass-panel reveal-item">
+          <div class="quote-mark">"</div>
+          <blockquote class="quote-text">
+            El código limpio no es solo funcional,<br />
+            es una forma de comunicación.
+          </blockquote>
+          <cite class="quote-author">— Tomas Stutz</cite>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════ -->
+  <!-- FOOTER                                 -->
+  <!-- ══════════════════════════════════════ -->
+  <footer class="glass-footer" role="contentinfo">
+    <div class="footer-inner">
+      <span class="footer-name">Tomas Bautista Stutz</span>
+      <span class="footer-sep">·</span>
+      <span class="footer-year">2026</span>
+      <span class="footer-sep">·</span>
+      <span class="footer-built">Construido con HTML, CSS & JS</span>
+    </div>
+  </footer>
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- Main Script -->
+  <script src="main.js"></script>
+</body>
+
+</html>
