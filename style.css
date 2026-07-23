@@ -1,6 +1,6 @@
 /* ════════════════════════════════════════════════════════════
-   TOMAS STUTZ — PORTFOLIO
-   Liquid Glass / Spatial UI Design System
+    TOMAS STUTZ — PORTFOLIO
+    Liquid Glass / Spatial UI Design System
    ════════════════════════════════════════════════════════════ */
 
 /* ─── RESET & BASE ──────────────────────────────────────── */
@@ -80,7 +80,7 @@ body {
 }
 
 /* ════════════════════════════════════════════════════════════
-   AURORA BACKGROUND
+    AURORA BACKGROUND
    ════════════════════════════════════════════════════════════ */
 .aurora-container {
   position: fixed;
@@ -144,7 +144,7 @@ body {
 }
 
 /* ════════════════════════════════════════════════════════════
-   CURSOR GLOW
+    CURSOR GLOW
    ════════════════════════════════════════════════════════════ */
 .cursor-glow {
   position: fixed;
@@ -162,7 +162,7 @@ body {
 }
 
 /* ════════════════════════════════════════════════════════════
-   GLASS UTILITY CLASSES
+    GLASS UTILITY CLASSES
    ════════════════════════════════════════════════════════════ */
 .glass-panel {
   background: var(--glass-bg);
@@ -225,7 +225,7 @@ body {
 .tilt-card:hover .card-shine { opacity: 1; }
 
 /* ════════════════════════════════════════════════════════════
-   NAVIGATION
+    NAVIGATION
    ════════════════════════════════════════════════════════════ */
 .glass-nav {
   position: fixed;
@@ -375,7 +375,7 @@ body {
 }
 
 /* ════════════════════════════════════════════════════════════
-   HERO SECTION
+    HERO SECTION
    ════════════════════════════════════════════════════════════ */
 .hero-section {
   position: relative;
@@ -603,7 +603,7 @@ body {
 }
 
 /* ════════════════════════════════════════════════════════════
-   SECTION COMMON
+    SECTION COMMON
    ════════════════════════════════════════════════════════════ */
 .section {
   position: relative;
@@ -664,7 +664,7 @@ body {
 }
 
 /* ════════════════════════════════════════════════════════════
-   ABOUT SECTION
+    ABOUT SECTION
    ════════════════════════════════════════════════════════════ */
 .about-grid {
   display: grid;
@@ -755,7 +755,7 @@ body {
 }
 
 /* ════════════════════════════════════════════════════════════
-   PROJECTS SECTION
+    PROJECTS SECTION
    ════════════════════════════════════════════════════════════ */
 .projects-grid {
   display: grid;
@@ -943,7 +943,7 @@ body {
 }
 
 /* ════════════════════════════════════════════════════════════
-   SKILLS SECTION
+    SKILLS SECTION
    ════════════════════════════════════════════════════════════ */
 .skills-container { width: 100%; }
 
@@ -1067,7 +1067,7 @@ body {
 }
 
 /* ════════════════════════════════════════════════════════════
-   CONTACT SECTION
+    CONTACT SECTION
    ════════════════════════════════════════════════════════════ */
 .contact-grid {
   display: grid;
@@ -1147,7 +1147,7 @@ body {
 }
 
 /* ════════════════════════════════════════════════════════════
-   FOOTER
+    FOOTER
    ════════════════════════════════════════════════════════════ */
 .glass-footer {
   position: relative;
@@ -1173,7 +1173,7 @@ body {
 .footer-sep { color: var(--text-muted); }
 
 /* ════════════════════════════════════════════════════════════
-   RESPONSIVE — TABLET (768px)
+    RESPONSIVE — TABLET (768px)
    ════════════════════════════════════════════════════════════ */
 @media (max-width: 1024px) {
   .projects-grid {
@@ -1222,7 +1222,7 @@ body {
 }
 
 /* ════════════════════════════════════════════════════════════
-   RESPONSIVE — MOBILE (480px)
+    RESPONSIVE — MOBILE (480px)
    ════════════════════════════════════════════════════════════ */
 @media (max-width: 768px) {
   .nav-links { display: none; }
@@ -1238,10 +1238,11 @@ body {
   .projects-grid {
     grid-template-columns: 1fr;
   }
-
+  .skills-category {
+    padding: 24px 20px;
+  }
   .skills-grid {
     grid-template-columns: repeat(3, 1fr);
-    padding: 16px;
   }
 
   .skill-item { padding: 16px 8px; }
@@ -1294,7 +1295,7 @@ body {
 }
 
 /* ════════════════════════════════════════════════════════════
-   FOCUS ACCESSIBILITY
+    FOCUS ACCESSIBILITY
    ════════════════════════════════════════════════════════════ */
 :focus-visible {
   outline: 2px solid var(--accent-violet);
@@ -1303,7 +1304,7 @@ body {
 }
 
 /* ════════════════════════════════════════════════════════════
-   REDUCED MOTION
+    REDUCED MOTION
    ════════════════════════════════════════════════════════════ */
 @media (prefers-reduced-motion: reduce) {
   .aurora-orb,
@@ -1345,7 +1346,7 @@ body {
 }
 
 /* ════════════════════════════════════════════════════════════
-   AI AGENTS SECTION
+    AI AGENTS SECTION
    ════════════════════════════════════════════════════════════ */
 .ai-intro {
   font-size: 1rem;
