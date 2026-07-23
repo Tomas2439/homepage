@@ -541,14 +541,9 @@ body {
   height: 200px;
   border-radius: 50%;
   padding: 3px;
-  background: linear-gradient(135deg, var(--accent-purple), var(--accent-cyan), var(--accent-indigo));
-  animation: ringRotate 4s linear infinite;
+  /* Gradiente estático limpio — sin rotación de colores */
+  background: linear-gradient(135deg, #7c3aed 0%, #06b6d4 50%, #6366f1 100%);
   flex-shrink: 0;
-}
-
-@keyframes ringRotate {
-  from { filter: hue-rotate(0deg); }
-  to   { filter: hue-rotate(360deg); }
 }
 
 .avatar-img {
@@ -859,17 +854,134 @@ body {
   border-color: rgba(6, 182, 212, 0.3);
 }
 
+/* ─── PROJECT BLOCKS (client / personal separators) ────── */
+.projects-block {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.projects-block-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+.block-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 5px 12px;
+  border-radius: 50px;
+}
+
+.block-label-client {
+  color: #fbbf24;
+  background: rgba(251, 191, 36, 0.08);
+  border: 1px solid rgba(251, 191, 36, 0.2);
+}
+
+.block-label-personal {
+  color: var(--accent-violet);
+  background: rgba(139, 92, 246, 0.08);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+.block-count {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* 2-col grid for client projects */
+.projects-grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* Client badge pill on card */
+.client-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #fbbf24;
+  background: rgba(251, 191, 36, 0.1);
+  border: 1px solid rgba(251, 191, 36, 0.25);
+  border-radius: 50px;
+  padding: 3px 8px;
+}
+
+.client-badge-utn {
+  color: #60a5fa;
+  background: rgba(96, 165, 250, 0.1);
+  border-color: rgba(96, 165, 250, 0.25);
+}
+
+#project-hotel:hover,
+#project-barhaus:hover,
+#project-cg:hover {
+  border-color: rgba(251, 191, 36, 0.25);
+}
+
+#project-caan:hover {
+  border-color: rgba(96, 165, 250, 0.25);
+}
+
+@media (max-width: 768px) {
+  .projects-grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ════════════════════════════════════════════════════════════
    SKILLS SECTION
    ════════════════════════════════════════════════════════════ */
 .skills-container { width: 100%; }
 
+/* ── SKILLS CATEGORIES ── */
+.skills-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.skills-category {
+  padding: 32px;
+}
+
+.skills-category-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: var(--text-base);
+}
+
+.skills-subcategory-title {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 32px 0 16px 0;
+  color: var(--text-muted);
+}
+
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 0;
-  padding: 32px;
-  border-radius: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 12px;
+}
+
+.skills-grid-small {
+  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
 }
 
 .skill-item {
@@ -1230,6 +1342,117 @@ body {
 
 .perf-mode .tilt-card {
   transform: none !important;
+}
+
+/* ════════════════════════════════════════════════════════════
+   AI AGENTS SECTION
+   ════════════════════════════════════════════════════════════ */
+.ai-intro {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  max-width: 600px;
+}
+
+.ai-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.ai-card {
+  padding: 28px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.ai-card-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.ai-logo-wrap {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.ai-logo-antigravity {
+  background: linear-gradient(135deg, rgba(99,102,241,0.25), rgba(124,58,237,0.15));
+  color: #818cf8;
+}
+.ai-logo-claude {
+  background: linear-gradient(135deg, rgba(217,119,6,0.25), rgba(245,158,11,0.15));
+  color: #fbbf24;
+}
+.ai-logo-gpt {
+  background: linear-gradient(135deg, rgba(16,185,129,0.25), rgba(5,150,105,0.15));
+  color: #34d399;
+}
+.ai-logo-gemini {
+  background: linear-gradient(135deg, rgba(26,115,232,0.25), rgba(26,115,232,0.15));
+  color: #4285f4;
+}
+.ai-logo-workflow {
+  background: linear-gradient(135deg, rgba(6,182,212,0.25), rgba(14,165,233,0.15));
+  color: #22d3ee;
+}
+
+.ai-card-name {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.ai-card-role {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.ai-card-desc {
+  font-size: 0.875rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  flex: 1;
+}
+
+.ai-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding-top: 6px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.ai-tag {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--accent-cyan);
+  background: rgba(6, 182, 212, 0.10);
+  border: 1px solid rgba(6, 182, 212, 0.18);
+  border-radius: 50px;
+  padding: 3px 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 768px) {
+  .ai-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ─── CONTACT BRAND COLORS ON HOVER ────────────────────── */
