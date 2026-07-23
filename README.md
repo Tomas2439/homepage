@@ -12,7 +12,7 @@
 ## ✨ Vista previa
 
 <!-- Reemplazá con un screenshot real cuando lo tengas -->
-![Preview del portfolio](assets/avatar.jpg)
+<img width="1155" height="687" alt="image" src="https://github.com/user-attachments/assets/b620e6c1-e4bd-4fa7-b182-44bf57ac711c" />
 
 ---
 
@@ -69,11 +69,6 @@ tomas-portfolio/
 
 ---
 
-## 🚀 Correr localmente
-
-
----
-
 ## 📂 Proyectos incluidos
 
 | # | Proyecto | Descripción |
@@ -99,12 +94,6 @@ tomas-portfolio/
 
 ---
 
-## 📄 Licencia
-
-MIT — libre para usar como referencia o inspiración.
-
----
-
 <p align="center">
-  Construido con HTML, CSS &amp; JS · The Odin Project 2025
+  Construido con HTML, CSS &amp; JS · The Odin Project 2026
 </p>
